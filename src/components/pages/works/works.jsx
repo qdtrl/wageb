@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   Route,
   Switch,
@@ -9,8 +8,6 @@ import StudyCase from './studycase';
 
 
 const Works = () => {
-  const [project, setProject] = useState(null);
-
   const pageTitle = `Au fil des années, nous avons pu accompagner les meilleurs.`;
   const speach = `Découvrez pas à pas comment nous avons été présent pour lancer vos marques préférées.`;
   const projects = [
@@ -32,18 +29,18 @@ const Works = () => {
       description: `Malgré nos conseils et notre site web créé sur Wix, Sedal semble ne pas vouloir décoller. Mais comme un grand homme et une grande femme l'ont dit, "les derniers seront les premiers".
       `,
     }
-  ]
+  ];
 
   return (
     <>
-      <>{pageTitle}</>
+      <h1>{pageTitle}</h1>
       <p>{speach}</p>
        
       <Router>
       <NavbarProjects projects={projects} />
       <Switch>
         <Route path="/work/:studySlug">
-          <StudyCase project={project} />
+          <StudyCase projects={projects} />
         </Route>
       </Switch>
       </Router>   

@@ -9,8 +9,7 @@ import ToggleButton from '@material-ui/lab/ToggleButton';
 
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-
-import { Switch } from 'antd';
+import Switch from '@material-ui/core/Switch';
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -37,11 +36,14 @@ const Navbar = () => {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}><Link to="/">Home</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/about">About me</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/contact">Contact</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/about">About</Link></MenuItem>
         <MenuItem onClick={handleClose}><Link to="/works">Works</Link></MenuItem>
         <MenuItem>
-          <Switch onChange={theme.changeTheme} checkedChildren="dark" unCheckedChildren="light" defaultChecked/>
+          <Switch
+        checked={theme.theme === 'dark' ? true : false}
+        onChange={theme.changeTheme}
+        inputProps={{ 'aria-label': 'secondary checkbox' }}
+      />
         </MenuItem>
 
       </Menu>
