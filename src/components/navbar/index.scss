@@ -1,0 +1,25 @@
+nav.nav_menu {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  border-radius: 5px;
+  z-index: 2;
+  button {
+    border: 1px solid;
+  }
+  &.dark {
+    background-color: $dark-bgr-color;
+    button {
+      color: $dark-color;
+      border-color: $dark-color;
+    }
+    color: red;
+  }
+  &.light {
+    background-color: $light-bgr-color;
+    button {
+      color: $light-color;
+      border-color: $light-color;
+    }
+  }
+}
