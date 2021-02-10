@@ -7,7 +7,7 @@ import {
 import './index.scss';
 import Home from './components/pages/home';
 import About from './components/pages/about';
-import Works from './components/pages/works';
+import Works from './components/pages/works/works';
 import Navbar from './components/navbar/';
 import ThemeContext from './components/context/';
 import { useState } from 'react';

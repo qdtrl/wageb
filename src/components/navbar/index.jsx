@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import {useState} from 'react';
 
-import ThemeContext from '../pages/components/context/index';
+import ThemeContext from '../context/index';
 import { useContext } from 'react';
 
 import ViewListIcon from '@material-ui/icons/ViewList';
@@ -36,16 +36,11 @@ const Navbar = () => {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}><Link to="/">Home</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/about">About</Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/works">Works</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/about">L'agence</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/works">Projects</Link></MenuItem>
         <MenuItem>
-          <Switch
-        checked={theme.theme === 'dark' ? true : false}
-        onChange={theme.changeTheme}
-        inputProps={{ 'aria-label': 'secondary checkbox' }}
-      />
+          <Switch checked={theme.theme === 'dark' ? true : false} onChange={theme.changeTheme} inputProps={{ 'aria-label': 'secondary checkbox' }}/>
         </MenuItem>
-
       </Menu>
     </nav>
   );

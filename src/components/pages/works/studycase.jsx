@@ -13,8 +13,13 @@ const StudyCase = ( { projects } ) => {
 
   return (
     <>
-      <h1>{currentStudy.title}</h1>
-      <p>{currentStudy.description}</p>
+      {
+        currentStudy && 
+        <section className="study">
+          <h2>{currentStudy.title}</h2> 
+          <p>{currentStudy.description}</p>
+        </section> 
+      }
     </>
   )
 }

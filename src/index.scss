@@ -1,5 +1,4 @@
 @import './components/config';
-@import './components/pages/works';
 @import './components/navbar/index';
 
 * {
@@ -17,10 +16,13 @@
   }
 }
 
-section.app {
+section.study {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100vw;
+  height: 50vh;
 }
