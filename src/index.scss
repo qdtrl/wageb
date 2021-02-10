@@ -1,5 +1,6 @@
 @import './components/config';
 @import './components/navbar/index';
+@import './components/pages/works/navbar/index';
 
 * {
   margin: 0;
@@ -15,6 +16,24 @@
     background-color: $dark-bgr-color;
   }
 }
+div.app {
+  margin: 0;
+  padding: 2rem;
+  width: 100vw;
+  height: 100vh;
+  &.light {
+    color: $light-color;
+    background-color: $light-bgr-color;
+  }
+  &.dark{
+    color: $dark-color;
+    background-color: $dark-bgr-color;
+  }
+  h1 {
+    margin: 0rem 2rem 2rem 2rem;
+  }
+}
+
 
 section.study {
   margin: 0;

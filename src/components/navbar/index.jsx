@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import {useState} from 'react';
 
-import ThemeContext from '../context/index';
+import ThemeContext from '../context/theme';
 import { useContext } from 'react';
 
 import ViewListIcon from '@material-ui/icons/ViewList';

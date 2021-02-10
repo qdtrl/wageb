@@ -1,0 +1,33 @@
+nav.nav_studies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem; 
+  div.card_study {
+    height: 200px;
+    width: 300px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h2 {
+      font-size: 1rem;
+    }
+    p {
+      text-align: right;
+      margin: 2rem;
+      span {
+        color: $secondary-color;
+      }
+    }
+    &.dark {
+      background-color: grey;
+    }
+    &.light {
+      background-color: antiquewhite;
+    }
+    &:hover {
+      box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+}

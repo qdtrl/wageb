@@ -9,16 +9,19 @@ import Home from './components/pages/home';
 import About from './components/pages/about';
 import Works from './components/pages/works/works';
 import Navbar from './components/navbar/';
-import ThemeContext from './components/context/';
+import ThemeContext from './components/context/theme';
 import { useState } from 'react';
 
+
 const Wageb = () => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
   return (
     <ThemeContext.Provider value={{
       theme, 
-      changeTheme: () => setTheme(theme === 'dark'? 'light' : 'dark') 
+      changeTheme: () => setTheme(theme === 'dark' ? 'light' : 'dark') 
     }}>
+      <div className={`app ${theme}`}>
       <Router>
         <main className={theme}>
           <Navbar />
@@ -35,6 +38,7 @@ const Wageb = () => {
           </Switch>
         </main>
       </Router>
+      </div>
     </ThemeContext.Provider>
   );
 }
